@@ -24,7 +24,7 @@ const GithubButton = (props: Props) => {
       title={title}
       src={`https://ghbtns.com/github-btn.html${options}`}
       frameBorder="0"
-      allowTransparency="true"
+      allowtransparency="true"
       scrolling="0"
       width={width}
       height={height}
