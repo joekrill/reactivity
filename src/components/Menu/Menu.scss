@@ -1,18 +1,100 @@
-.nav {
-  border-bottom: 1px solid #eee;
-  display: block;
-  padding: 15px 10%;
-}
-
 .link {
-  margin-right: 10px;
-  font-size: 16px;
-  color: #000;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1.1em;
+  // color: #000;
   text-decoration: underline;
+  display: inline-block;
 }
 
 .activeLink {
   composes: link;
   pointer-events: none;
   text-decoration: none;
+}
+
+.nav {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1em 10%;
+  text-align: center;
+  background-color: #fff;
+  background-color: #F4F7FC;
+
+  // background-image: url('/images/crossword/crossword.png');
+  // background-image: url('/images/light_grey/light_grey.png');
+  // background-image: url('/images/grid/grid.png');
+  background-image: url('/images/symphony/symphony.png');
+  // background-image: url('/images/cream_pixels/cream_pixels.png');
+  // background-image: url('/images/debut_light/debut_light.png');
+  // background-image: url('/images/subtle_white_feathers/subtle_white_feathers.png');
+  // background-image: url('/images/debut_light/debut_light.png');
+  // background-image: url('/images/clean_textile/clean_textile.png');
+}
+
+.nav__logo {
+  // display: inline-block;
+  position: relative;
+
+  /** should match the width of the logo (nav__logo_image) + any right margin */
+  width: 5em;
+  min-width: 5em;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    left: -6em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: Heart-Pulse infinite 3s ease-in-out;
+    background-image: url('../../containers/Hero/heart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1em;
+  }
+}
+
+.nav__logo_image {
+  /* Allow the logo to drop below the header. */
+  position: absolute;
+  top: -0.5em;
+  left: 0;
+
+  /** Controls the size of the "logo" */
+  width: 4em;
+}
+
+@media (max-width: 500px) {
+  /* On small screens add some additional margin between nav items */
+  .link {
+    margin: 0.15em 0.75em;
+  }
+}
+
+@keyframes Heart-Pulse {
+  from {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  80% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  85% {
+    transform: scale3d(1.15, 1.05, 1.15);
+  }
+
+  90% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  95% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
 }

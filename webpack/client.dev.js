@@ -14,20 +14,20 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
     'react-hot-loader/patch',
-    path.resolve(__dirname, '../src/client.js')
+    path.resolve(__dirname, '../src/client.js'),
   ],
   output: {
     filename: '[name].js',
     chunkFilename: '[name].js',
     path: path.resolve(__dirname, '../build'),
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: 'babel-loader',
       },
       {
         test: /\.scss$/,
@@ -38,34 +38,34 @@ module.exports = {
               query: {
                 modules: true,
                 localIdentName: '[name]__[local]--[hash:base64:5]'
-              }
+              },
             },
             'sass-loader',
             {
               loader: 'postcss-loader',
               options: {
                 plugins: () => [autoprefixer({ browsers: 'last 2 versions' })]
-              }
-            }
-          ]
-        })
+              },
+            },
+          ],
+        }),
       },
       {
         test: /\.(jpg|png|gif|svg|ico)$/,
         use: [
           {
-            loader: 'url-loader'
-          }
-        ]
-      }
-    ]
+            loader: 'url-loader',
+          },
+        ],
+      },
+    ],
   },
   resolve: {
     alias: {
       components: path.resolve(__dirname, '..', 'src/components/'),
-      reducers: path.resolve(__dirname, '..', 'src/redux/')
+      reducers: path.resolve(__dirname, '..', 'src/redux/'),
     },
-    extensions: ['.json', '.js', '.jsx']
+    extensions: ['.json', '.js', '.jsx'],
   },
   plugins: [
     new WriteFilePlugin(),
@@ -73,20 +73,20 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       names: ['bootstrap'], // needed to put webpack bootstrap code before chunks
       filename: '[name].js',
-      minChunks: Infinity
+      minChunks: Infinity,
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.ProvidePlugin({
-      fetch: 'isomorphic-fetch'
+      fetch: 'isomorphic-fetch',
     }),
     new Dotenv({
       path: path.resolve(__dirname, '..', '.env'),
-      safe: false
+      safe: false,
     }),
     new ServiceWorkerPlugin({
       entry: path.join(__dirname, '..', 'src/sw.js'),
       excludes: ['*hot-update*', '**/*.map', '**/stats.json']
-    })
-  ]
-}
+    }),
+  ],
+};

@@ -1,16 +1,21 @@
+const title = "Karilynn & Joe's Wedding";
+const description = `Details for the wedding of Karilynn Bayus and Joe Krill, June 16th, 2018 in Philadelphia, PA, USA`;
+
 module.exports = {
-  title: 'Reactivity',
-  description: 'A Bleeding Edge React Universal Boilerplate for Power Users.',
+  title,
+  description,
   head: {
+    defaultTitle: `${title} - June 16th, 2018`,
+    titleTemplate: `%s - ${title}`,
     meta: [
       { charset: 'utf-8' },
       { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       {
         name: 'description',
-        content: 'All the modern best practices in one example.'
+        content: description,
       },
-      { name: 'theme-color', content: '#ffffff' }
+      { name: 'theme-color', content: '#ffffff' },
     ],
     link: [
       { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' },
@@ -31,11 +36,21 @@ module.exports = {
       {
         rel: 'mask-icon',
         href: 'msapplication-TileImage',
-        content: 'mstile-144x144.png'
-      }
+        content: 'mstile-144x144.png',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat:400,600',
+      },
     ],
     htmlAttributes: {
-      lang: 'en'
-    }
-  }
-}
+      lang: 'en',
+    },
+  },
+  hotel: {
+    placeId: 'ChIJZVdUezrGxokRCUImH2vOZ1U',
+  },
+  venue: {
+    placeId: 'ChIJB5OL9jrGxokRDmSeDBOaCv0',
+  },
+};

@@ -52,6 +52,8 @@
     "write-file-webpack-plugin": "^4.2.0"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "classnames": "^2.2.5",
     "compression": "^1.7.1",
     "dotenv": "^4.0.0",
     "dotenv-webpack": "^1.5.4",

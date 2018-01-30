@@ -13,23 +13,23 @@ import { apiFetch } from '../../helpers/Api'
 import {
   FETCHING_DATA,
   FETCHING_DATA_FAILURE,
-  FETCHING_DATA_SUCCESS
+  FETCHING_DATA_SUCCESS,
 } from './types'
 import type { Neo } from './types'
 
 type fetchDataAction = {
   type: typeof FETCHING_DATA,
-  payload: { startDate: string, endDate: string }
+  payload: { startDate: string, endDate: string },
 }
 
 type getDataSuccessAction = {
   type: typeof FETCHING_DATA_SUCCESS,
-  payload: { [key: string]: Array<Neo> }
+  payload: { [key: string]: Array<Neo> },
 }
 
 type getDataFailureAction = {
   type: typeof FETCHING_DATA_FAILURE,
-  payload: string
+  payload: string,
 }
 
 export type Actions =
@@ -42,8 +42,8 @@ export function fetchData(startDate: string, endDate: string): fetchDataAction {
     type: FETCHING_DATA,
     payload: {
       startDate,
-      endDate
-    }
+      endDate,
+    },
   }
 }
 
@@ -52,14 +52,14 @@ export function getDataSuccess(data: {
 }): getDataSuccessAction {
   return {
     type: FETCHING_DATA_SUCCESS,
-    payload: data.near_earth_objects
+    payload: data.near_earth_objects,
   }
 }
 
 export function getDataFailure(error: string): getDataFailureAction {
   return {
     type: FETCHING_DATA_FAILURE,
-    payload: error
+    payload: error,
   }
 }
 

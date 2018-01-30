@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import TypicalFrom from 'components/TypicalForm/TypicalForm'
 import { fetchData } from 'reducers/neo'
 import type { Neo } from 'reducers/neo'
+import PageContent from '../../components/PageContent/PageContent';
 
 type Props = {
   neo: Array<Neo>,
@@ -34,12 +35,11 @@ class Examples extends Component<Props> {
     const { neo, loading, loaded } = this.props
 
     return (
-      <div>
+      <PageContent title="RSVP">
         <Helmet
-          title="Examples"
-          meta={[{ name: 'description', content: 'Reactivity Examples' }]}
+          title="RSVP"
+          meta={[{ name: 'description', content: 'RSVP to the wedding' }]}
         />
-        <h1>What can it do?</h1>
 
         <p>
           We know our demo app is not particularly exciting, but stay tuned as
@@ -137,7 +137,7 @@ class Examples extends Component<Props> {
         </p>
 
         <TypicalFrom onSubmit={this.typicalSubmit} />
-      </div>
+      </PageContent>
     )
   }
 }

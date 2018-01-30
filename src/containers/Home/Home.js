@@ -3,35 +3,15 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'react-router-dom/Link'
+import photo from '../../components/Photos/img_0408.jpg'
+import style from './Home.scss'
+import Photo from '../../components/Photo/Photo';
+import PageContent from '../../components/PageContent/PageContent';
 
 const Home = () => (
-  <div>
-    <Helmet
-      title="Home"
-      meta={[{ name: 'description', content: 'Welcome to Reactivity' }]}
-    />
-    <h1>What is it really?</h1>
-    <p>
-      A <b>universally rendered PWA</b> with <b>code-splitting</b> that uses:
-    </p>
-    <ul>
-      <li>React</li>
-      <li>React Router 4</li>
-      <li>Redux</li>
-      <li>Webpack</li>
-      <li>Express</li>
-      <li>Eslint</li>
-      <li>Redux Form</li>
-      <li>Style and Sass Loader</li>
-      <li>RXJS</li>
-      <li>Service Worker</li>
-    </ul>
-
-    <p>
-      Take a look at our <Link to="/examples">Examples Page</Link> to see parts
-      of this in action.
-    </p>
-  </div>
+  <PageContent title="We're getting married!">
+    <Photo className={style.Photo} src={photo} alt="Us" />
+  </PageContent>
 )
 
 export default Home
