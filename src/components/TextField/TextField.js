@@ -1,12 +1,12 @@
 // @flow
 
-import React from 'react'
-import type { FieldProps } from 'redux-form'
+import React from 'react';
+import type { FieldProps } from 'redux-form';
 
 type Props = {
   label: string,
   type: string
-} & FieldProps
+} & FieldProps;
 
 const TextField = ({
   input,
@@ -23,6 +23,6 @@ const TextField = ({
           (warning && <span>{warning}</span>))}
     </label>
   </div>
-)
+);
 
-export default TextField
+export default TextField;

@@ -1,11 +1,11 @@
 // @flow
 
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
-import type { FormProps } from 'redux-form'
-import TextField from '../TextField/TextField'
-import SelectField from '../SelectField/SelectField'
-import typicalValidation from './TypicalValidation'
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form';
+import TextField from '../TextField/TextField';
+import SelectField from '../SelectField/SelectField';
+import typicalValidation from './TypicalValidation';
 
 const TypicalForm = ({
   handleSubmit,
@@ -47,9 +47,9 @@ const TypicalForm = ({
       Reset
     </button>
   </form>
-)
+);
 
 export default reduxForm({
   form: 'typical', // a unique identifier for this form
   validate: typicalValidation
-})(TypicalForm)
+})(TypicalForm);

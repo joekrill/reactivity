@@ -1,9 +1,9 @@
 // @flow
 
-import React from 'react'
-import type { Node } from 'react'
-import Helmet from 'react-helmet'
-import serialize from 'serialize-javascript'
+import React from 'react';
+import type { Node } from 'react';
+import Helmet from 'react-helmet';
+import serialize from 'serialize-javascript';
 
 type Props = {
   styles: Array<string>,
@@ -11,7 +11,7 @@ type Props = {
   js: Array<string>,
   component: Node,
   state: {}
-}
+};
 
 const Html = (props: Props) => {
   const { styles, cssHash, js, component, state } = props
@@ -55,6 +55,6 @@ const Html = (props: Props) => {
       </body>
     </html>
   )
-}
+};
 
-export default Html
+export default Html;

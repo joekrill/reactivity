@@ -22,15 +22,7 @@
   background-color: #fff;
   background-color: #F4F7FC;
 
-  // background-image: url('/images/crossword/crossword.png');
-  // background-image: url('/images/light_grey/light_grey.png');
-  // background-image: url('/images/grid/grid.png');
-  background-image: url('/images/symphony/symphony.png');
-  // background-image: url('/images/cream_pixels/cream_pixels.png');
-  // background-image: url('/images/debut_light/debut_light.png');
-  // background-image: url('/images/subtle_white_feathers/subtle_white_feathers.png');
-  // background-image: url('/images/debut_light/debut_light.png');
-  // background-image: url('/images/clean_textile/clean_textile.png');
+  background-image: url('/images/symphony.png');
 }
 
 .nav__logo {
@@ -49,7 +41,7 @@
     top: 0;
     bottom: 0;
     animation: Heart-Pulse infinite 3s ease-in-out;
-    background-image: url('../../containers/Hero/heart.svg');
+    background-image: url('/images/heart.svg');
     background-repeat: no-repeat;
     background-position: center;
     height: 1em;

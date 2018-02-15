@@ -1,8 +1,8 @@
 // @flow
 
-import React from 'react'
-import Helmet from 'react-helmet'
-import Status from 'components/RouterStatus/Status'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Status from 'components/RouterStatus/Status';
 
 const NotFound = () => (
   <Status code={404}>
@@ -15,6 +15,6 @@ const NotFound = () => (
       <p>Its in a better place now...</p>
     </div>
   </Status>
-)
+);
 
-export default NotFound
+export default NotFound;

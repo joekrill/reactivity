@@ -1,14 +1,14 @@
 // @flow
 
-import React from 'react'
-import Route from 'react-router-dom/Route'
-import Redirect from 'react-router-dom/Redirect'
+import React from 'react';
+import Route from 'react-router-dom/Route';
+import Redirect from 'react-router-dom/Redirect';
 
 type Props = {
   from: string,
   to: string,
   status: number
-}
+};
 
 const RedirectWithStatus = (props: Props) => (
   <Route
@@ -19,6 +19,6 @@ const RedirectWithStatus = (props: Props) => (
       return <Redirect from={props.from} to={props.to} />
     }}
   />
-)
+);
 
-export default RedirectWithStatus
+export default RedirectWithStatus;

@@ -1,46 +1,44 @@
 // @flow
 
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'react-router-dom/Link'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Link from 'react-router-dom/Link';
 import PageContent from '../../components/PageContent/PageContent';
+import Section from '../../components/Section/Section';
 import styles from './Hotel.scss';
 import { hotel } from '../../config';
+import Place from '../../components/Map/Place';
+import PlaceLink from '../../components/Map/PlaceLink';
 
-// TODO:
-// @see https://developers.google.com/maps/documentation/embed/guide
-// Better URL generation
-// include `attribution_ios_deep_link_id=comgooglemaps://?daddr`
-// Restrict API Key: https://console.developers.google.com/apis/credentials?project=wedding-website-1515172845063&authuser=0
-
-const Home = () => (
+const Hotel = () => (
   <PageContent title="Hotel">
     <Helmet
       title="Travel"
       meta={[
         {
           name: 'description',
-          content: `Traveling to the wedding`,
+          content: `Accommodations for the wedding`,
         },
       ]}
     />
-    <iframe
-      allowfullscreen
-      className={styles.HotelMap}
-      src={`https://www.google.com/maps/embed/v1/place?q=place_id:${hotel.placeId}&key=${process.env.GOOGLE_MAPS_API_KEY}&attribution_source=Karilynn+Joe's+Wedding&attribution_web_url=http://www.karilynnjoe.com`}
-      title='Warwick Hotel Map'
-    />
-    <h1>Hotel</h1>
-    <img src='/images/warwick-hotel-logo.png' />
-    <address>
-      Warwick Hotel Rittenhouse Square
-      220 South 17th Street
-      (17th St. between Walnut and Locust Sts.)
-      Philadelphia, PA 19103
-      215.735.6000
-      http://www.warwickrittenhouse.com/
-    </address>
-  </PageContent>
-)
+    <Section>
+      <p>
+        <img className={styles.HotelLogo} src='/images/warwick-hotel-logo.png' />
+        For out of town guests, we've held a block of rooms at The Warwick Hotel. It's right in the heart of the{' '}
+        Rittenhouse Square neighborhood of Philadelphia and just one block from our wedding venue.{' '}
+        The address for The Warwick is <PlaceLink placeId={hotel.placeId} title="The Warwick Hotel">220 South 17th Street, Philadelphia, PA 19103</PlaceLink> and their phone number
+        is <a href="tel:215-735-6000">215-735-6000</a>.
+      </p>
 
-export default Home
+      <p>
+        For the discounted rate, please reserve through <a href={hotel.bookingUrl}>this special link</a>.
+      </p>
+      <Place
+        placeId={hotel.placeId}
+        title='The Warwick Hotel'
+      />
+    </Section>
+  </PageContent>
+);
+
+export default Hotel;

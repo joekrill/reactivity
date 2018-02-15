@@ -2,23 +2,14 @@
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: #fefefe;
-
-    // background-image: url('/images/vertical-waves/vertical-waves.png');
-    // background-image: url('/images/light_grey/light_grey.png');
-    // background-image: url('/images/grid/grid.png');
-    // background-image: url('/images/symphony/symphony.png');
-    // background-image: url('/images/cream_pixels/cream_pixels.png');
-    // background-image: url('/images/debut_light/debut_light.png');
-    // background-image: url('/images/subtle_white_feathers/subtle_white_feathers.png');
-    // background-image: url('/images/debut_light/debut_light.png');
-    // background-image: url('/images/clean_textile/clean_textile.png');
+    color: #555;
   }
 
   a {
     color: #105BCC;
-    // color: darken(#61dafb, 40);
   }
 
   h1 {
@@ -35,7 +26,7 @@
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   h4 {

@@ -1,0 +1,17 @@
+.Footer {
+  border-top: 1px dotted #ddd;
+  font-size: 0.7em;
+  padding: 2em;
+  margin-top: 5em;
+  text-align: center;
+  background-color: #eee;
+}
+
+.Footer__attributions {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Footer__attributions > li {
+  margin-bottom: 0.5em;  
+}

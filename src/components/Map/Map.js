@@ -1,18 +1,32 @@
 // @flow
 
-import React from 'react'
-import styles from './Map.scss'
+import React from 'react';
+import querystring from 'querystring';
+import styles from './Map.scss';
+
+const BASE_URL = 'https://www.google.com/maps/embed/v1';
+
+const BASE_PARAMS = {
+  key: process.env.GOOGLE_MAPS_API_KEY,
+};
+
+type Props = {
+  queryParams: {},
+  title?: string,
+  type: 'place' | 'directions' | 'search' | 'view' | 'streetview',
+};
 
 const Map = ({
-  placeId,
+  type,
+  queryParams,
   title,
-}) => (
+}: Props) => (
   <iframe
     allowFullScreen
     className={styles.Map}
-    src={`https://www.google.com/maps/embed/v1/place?q=place_id:${placeId}&key=${process.env.GOOGLE_MAPS_API_KEY}&attribution_source=Karilynn+Joe's+Wedding&attribution_web_url=http://www.karilynnjoe.com`}
+    src={`${BASE_URL}/${type}?${querystring.stringify({ ...BASE_PARAMS, ...queryParams })}`}
     title={title}
   />
-)
+);
 
-export default Map
+export default Map;
