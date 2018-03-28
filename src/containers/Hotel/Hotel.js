@@ -32,7 +32,9 @@ const Hotel = () => (
 
       <p>
         For the discounted rate, please reserve through <a href={hotel.bookingUrl}>this special link</a>.
-      </p>
+        If you need to book the room for more than just Saturday, be sure to change <i>both</i> dates at the top of
+        the page and click the "Search" button before clicking "Book Now".
+        Or use <a href={hotel.bookingUrlAlt}>this link for both Friday and Saturday nights</a>.
       <Place
         placeId={hotel.placeId}
         title='The Warwick Hotel'

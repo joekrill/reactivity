@@ -44,6 +44,7 @@ module.exports = {
   hotel: {
     placeId: 'ChIJZVdUezrGxokRCUImH2vOZ1U',
     bookingUrl: 'https://www.myhotelreservation.net/b/haphlwar/HAPHLWAR/?i=WWGRP038A&rac=*G38$&f=2018-06-16',
+    bookingUrlAlt: 'https://www.myhotelreservation.net/b/haphlwar/HAPHLWAR/?i=WWGRP038A&rac=*G38$&f=2018-06-15&t=2018-06-17',
   },
   venue: {
     placeId: 'ChIJB5OL9jrGxokRDmSeDBOaCv0',
