@@ -35,6 +35,7 @@ const Hotel = () => (
         If you need to book the room for more than just Saturday, be sure to change <i>both</i> dates at the top of
         the page and click the "Search" button before clicking "Book Now".
         Or use <a href={hotel.bookingUrlAlt}>this link for both Friday and Saturday nights</a>.
+      </p>
       <Place
         placeId={hotel.placeId}
         title='The Warwick Hotel'
