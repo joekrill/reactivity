@@ -85,14 +85,34 @@ const EventPage = () => (
           There are a few parking garages within a block or 2 of the venue:
         </p>
         <ul className={styles.ParkingList}>
-          <li className={styles.ParkingList__item}>
+         <li className={styles.ParkingList__item}>
             <div className={styles.ParkingList__title}>
-              <h4 className={styles.ParkingList__name}>Town Garage</h4> 
+              <h4 className={styles.ParkingList__name}>Latimer Garage</h4>
               <span className={styles.ParkingList__cost}>($17 - $23)</span>
             </div>
             <p className={styles.ParkingList__description}>
-              We recomend Town Garage at <PlaceLink placeId="ChIJewz4wzrGxokRW6VQh6rAc5k" title='Town Garage'>1524 Latimer Street</PlaceLink>{' '}
-              because it's the closest parking to the venue and has the lowest rates.{' '}
+              We recomend Latimer Garage at <PlaceLink placeId="ChIJc0iKzzrGxokRHg2MkN3F0Ws" title='Latimer'>1510 Latimer Street</PlaceLink>.{' '}
+              It's one block from the venue, and if you park here you can get{' '}
+              $1.00 off the posted rates with an stamp from our venue.{' '}
+              Enter on the south side of Latimer Street between 15th &amp; 16th Streets.{' '}
+              From there, walk one block west on Latimer to reach The Colonial Dames Society.{' '}
+            </p>
+            <div className={styles.ParkingList__map}>
+              <Place
+                placeId='ChIJc0iKzzrGxokRHg2MkN3F0Ws'
+                title='Latimer Garage'
+              />
+            </div>
+          </li>
+
+          <li className={styles.ParkingList__item}>
+            <div className={styles.ParkingList__title}>
+              <h4 className={styles.ParkingList__name}>Town Garage</h4>
+              <span className={styles.ParkingList__cost}>($17 - $23)</span>
+            </div>
+            <p className={styles.ParkingList__description}>
+              Town Garage at <PlaceLink placeId="ChIJewz4wzrGxokRW6VQh6rAc5k" title='Town Garage'>1524 Latimer Street</PlaceLink>{' '}
+              is right next to the Latimer Garage, and is the closest parking to the venue.{' '}
               Enter on the south side of Latimer Street between 15th &amp; 16th Streets.{' '}
               From there, walk one block west on Latimer to reach The Colonial Dames Society.{' '}
             </p>
@@ -103,41 +123,22 @@ const EventPage = () => (
               />
             </div>
           </li>
-          <li className={styles.ParkingList__item}> 
+          <li className={styles.ParkingList__item}>
             <div className={styles.ParkingList__title}>
               <h4 className={styles.ParkingList__name}>The Acadamy House</h4>
-              <span className={styles.ParkingList__cost}>($20 - $23)</span> 
+              <span className={styles.ParkingList__cost}>($10 with stamp)</span>
             </div>
             <p className={styles.ParkingList__description}>
               This condominium building has an underground parking garage at{' '}
-              <PlaceLink placeId="NCXGxokROq4cHSfYDbI" title='Acadamy House Parking'>251 S. 15th Street</PlaceLink>, two blocks from the venue.{' '}
+              <PlaceLink placeId="ChIJK8dMMyXGxokRKObdS3WrAyM" title='Acadamy House Parking'>251 S. 15th Street</PlaceLink>, two blocks from the venue.{' '}
+              They offer $10.00 flat-rate parking with a stamp from our venue.{' '}
               The entrance is on the east side of 15th Street between Spruce &amp; Locust Streets.{' '}
               From there head 2 blocks west on Latimer Street to reach The Colonial Dames Society.
             </p>
             <div className={styles.ParkingList__map}>
               <Place
-                placeId='ChIJ3aN-NCXGxokROq4cHSfYDbI'
-                title='Acadamy House Parking'
-              />
-            </div>
-          </li>
-          <li className={styles.ParkingList__item}>
-            <div className={styles.ParkingList__title}>
-              <h4 className={styles.ParkingList__name}>1500 Locust</h4> 
-              <span className={styles.ParkingList__cost}>($28 - $32)</span>
-            </div>
-            <p className={styles.ParkingList__description}>
-              Located <PlaceLink placeId='ChIJ-03tyTrGxokRsTtpS6GLTz4' title='1500 Locust Street'>between 15th &amp; 16th on Locust Street</PlaceLink>,{' '}
-              this garage is just around the corner from the venue -{' '}
-              next to Cinder and Fado, and across the street from Misconduct Tavern.{' '}
-              Enter on the south side of Locust Street.{' '}
-              To get to the venue from here, head west, cross and turn left on to 16th Street,{' '} 
-              walk a half of a block to turn right onto Latimer Street, and the Colonial Dames Society will be at the end of the block on your left.
-            </p>
-            <div className={styles.ParkingList__map}>
-              <Place
-                placeId='ChIJ-03tyTrGxokRsTtpS6GLTz4'
-                title='1500 Locust Street'
+                placeId='ChIJK8dMMyXGxokRKObdS3WrAyM'
+                title='Park America at The Acadamy House'
               />
             </div>
           </li>

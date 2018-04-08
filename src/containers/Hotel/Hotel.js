@@ -13,7 +13,7 @@ import PlaceLink from '../../components/Map/PlaceLink';
 const Hotel = () => (
   <PageContent title="Hotel">
     <Helmet
-      title="Travel"
+      title="Hotel"
       meta={[
         {
           name: 'description',
@@ -36,6 +36,8 @@ const Hotel = () => (
         the page and click the "Search" button before clicking "Book Now".
         Or use <a href={hotel.bookingUrlAlt}>this link for both Friday and Saturday nights</a>.
       </p>
+
+      <p>Please note that <strong>reservations for our wedding block must be made by May 15 to obtain the discounted rate</strong>.</p>
       <Place
         placeId={hotel.placeId}
         title='The Warwick Hotel'
