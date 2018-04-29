@@ -1,30 +1,30 @@
-const path = require('path')
-const express = require('express')
-const compression = require('compression')
-const httpProxy = require('http-proxy')
+const path = require('path');
+const express = require('express');
+const compression = require('compression');
+const bodyParser = require('body-parser');
+const rsvp = require('./rsvp');
 
-const app = express()
-const proxy = httpProxy.createProxyServer()
+const app = express();
 
-app.use(compression())
-app.disable('x-powered-by')
+app.use(compression());
+app.disable('x-powered-by');
+app.enable('trust proxy');
 app.use(express.static(path.join(__dirname, '..', '..', 'static')))
 
-app.use('/api', (req, res) => {
-  proxy.web(req, res, { target: process.env.API_URL, changeOrigin: true })
-})
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-proxy.on('error', (error, req, res) => {
-  if (error.code !== 'ECONNRESET') {
-    console.error('proxy error', error)
-  }
-  if (!res.headersSent) {
-    res.writeHead(500, { 'content-type': 'application/json' })
-  }
+app.post('/api/rsvp', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  rsvp(req.body, req.ip, req.headers['user-agent'], (error, result) => {
+    if (error) {
+      return res
+        .status(500)
+        .end(JSON.stringify({ error: { message: error.message } }));
+    }
 
-  res.end(JSON.stringify({ error: 'proxy_error', reason: error.message }))
-})
+    return res.status(200).end(JSON.stringify(result));
+  });
+});
 
-module.exports = {
-  app
-}
+module.exports = { app };

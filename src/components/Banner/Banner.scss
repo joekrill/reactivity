@@ -20,7 +20,7 @@ $ribbon-behind-color: darken($ribbon-color, 5%);
     content: "";
     position: absolute;
     display: block;
-    border-width: 1.5em; /* title height - padding */
+    border-width: 1em; /* title height - padding */
     border-style: solid;
     z-index: -1;
     top: 0.2em;
@@ -28,12 +28,12 @@ $ribbon-behind-color: darken($ribbon-color, 5%);
 
   &::before {
     border-color: $ribbon-behind-color $ribbon-behind-color $ribbon-behind-color transparent; /*bg color for left side of ribbon */
-    left: -2.5em;
+    left: -1.5em;
   }
 
   &::after {
     border-color: $ribbon-behind-color transparent $ribbon-behind-color $ribbon-behind-color; /*bg color for left side of ribbon */
-    right: -2.5em;
+    right: -1.5em;
   }
 }
 

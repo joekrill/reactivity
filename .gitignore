@@ -98,3 +98,5 @@ dist
 build
 
 .vscode
+
+*secret.json
