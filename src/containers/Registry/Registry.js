@@ -2,9 +2,11 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'react-router-dom/Link';
 import PageContent from '../../components/PageContent/PageContent';
 import Section from '../../components/Section/Section';
+import CrateAndBarrelLogo from './CrateAndBarrelLogo';
+import BedBathAndBeyondLogo from './BedBathAndBeyondLogo';
+import styles from './Registry.scss';
 
 const Registry = () => (
   <PageContent title="Registry">
@@ -18,8 +20,18 @@ const Registry = () => (
       ]}
     />
     <Section>
-      <p>We're working on getting ourselves registered, so stay tuned!</p>
-      <p>But honestly, the most important gift you can bring to our celebration is you and your dancing shoes. We are so thrilled to spend our special day with you and so thankful to have you in our lives!</p>
+      <ul className={styles.registryList}>
+        <li>
+          <a href="https://www.crateandbarrel.com/gift-registry/karilynn-bayus-and-joe-krill/r5846839">
+            <CrateAndBarrelLogo />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.bedbathandbeyond.com:443/store/giftregistry/view_registry_guest.jsp?registryId=545922754&eventType=Wedding&pwsurl=">
+            <BedBathAndBeyondLogo />
+          </a>
+        </li>
+      </ul>
     </Section>
   </PageContent>
 );
