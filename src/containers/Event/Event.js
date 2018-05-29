@@ -26,7 +26,7 @@ const EventPage = () => (
     <div>
       <Section>
         <h3>When &amp; Where</h3>
-        <time dateTime='2018-06-16'>Saturday, June 16th, 2018, time TBA (~5ish)</time>
+        <time dateTime='2018-06-16'>Saturday, June 16th, 2018, 5pm</time>
 
         <p>
           Our ceremony and reception (immediately following) will both be held at{' '}

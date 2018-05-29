@@ -50,7 +50,7 @@ module.exports = {
     placeId: 'ChIJB5OL9jrGxokRDmSeDBOaCv0',
   },
   contact: {
-    email: 'hi@joe-karilynn.com',
+    email: 'hi@karilynn-joe.com',
   },
   paths: {
     home: '',
