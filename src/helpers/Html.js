@@ -30,6 +30,7 @@ const Html = (props: Props) => {
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: component }} />
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
