@@ -14,6 +14,7 @@ import Event from '../Event';
 import Contact from '../Contact';
 import Registry from '../Registry';
 import Hotel from '../Hotel';
+import Watch from '../Watch';
 import Rsvp from '../Rsvp';
 import NotFound from '../NotFound';
 import { head, paths } from '../../config';
@@ -32,6 +33,7 @@ const App = () => (
         <Route path={`/${paths.contact}`} component={Contact} exact />
         <Route path={`/${paths.rsvp}`} component={Rsvp} exact />
         <Route path={`/${paths.hotel}`} component={Hotel} exact />
+        <Route path={`/${paths.watch}`} component={Watch} exact />
         <RedirectWithStatus status={302} from="/home" to={`/${paths.home}`} />
         <Route path="/shell" component={Loading} exact />
         <Route component={NotFound} />

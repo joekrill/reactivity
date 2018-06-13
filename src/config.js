@@ -52,23 +52,28 @@ module.exports = {
   contact: {
     email: 'hi@karilynn-joe.com',
   },
+  stream: {
+    eventId: 'xJRU0HXwDwA',
+  },
   paths: {
     home: '',
     event: 'wedding',
     registry: 'registry',
     contact: 'contact',
+    watch: 'live',
     rsvp: 'rsvp',
     hotel: 'hotel',
     shell: 'shell',
   },
   menu: {
-    order: ['home', 'event', 'registry', 'rsvp', 'hotel', 'contact'],
+    order: ['home', 'event', 'registry', 'watch', 'hotel', 'contact'],
     labels: {
       home: 'Home',
       event: 'Wedding',
       registry: 'Registry',
       contact: 'Contact Us',
       rsvp: 'RSVP',
+      watch: 'Watch',
       hotel: 'Hotel',
     }
   }
